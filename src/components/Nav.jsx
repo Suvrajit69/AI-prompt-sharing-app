@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { useState, useEffect } from "react";
 import { signIn, signOut, useProviders, getProviders, useSession } from "next-auth/react";
-import { flushSync } from "react-dom";
+// import { flushSync } from "react-dom";
 
 const Nav = () => {
   const {data: session} = useSession();

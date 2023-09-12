@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
@@ -17,11 +17,10 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   };
 
   const handleProfileClick = () => {
-    console.log(post);
 
     if (post.creator._id === session?.user.id) return router.push("/profile");
 
-    router.push(`/profile/${post.creator._id}?name=${post.creator.username}`);
+   return router.push(`/profile/${post.creator._id}?name=${post.creator.username}`);
   };
 
   return (
@@ -54,6 +53,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
             }
             width={12}
             height={12}
+            alt="copy"
           />
         </div>
       </div>
